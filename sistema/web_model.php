@@ -11,6 +11,7 @@ class Programas  {
 		$data = array('i',$parametro);
 		$sql = "CALL procedure_values(?)";
 		$resultado = $funciones->query($sql, $data, false);
+		// retorno resultado de la consulta convertido en un JSON
 		return json_encode($resultado);
 	}
 	
